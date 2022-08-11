@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul,
+ol {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+$dark: #2e353e;
+$darkblue: #0c0f66;
+$blue: #6a80a9;
+
+// connected all fonts
+
+$fonts: ('Montserrat', 'Regular', 400), ('Montserrat', 'Medium', 500),
+  ('Montserrat', 'SemiBold', 600), ('Montserrat', 'Bold', 700);
+
+@each $name, $fullName, $weight in $fonts {
+  @font-face {
+    font-family: $name;
+    src: url('@/assets/fonts/#{$name}-#{$fullName}.ttf');
+    font-weight: $weight;
+  }
+}
+
+body {
+  font-family: 'Montserrat' !important;
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Montserrat' !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+$sm: 576px;
+$md: 765px;
+$lg: 992px;
+$xl: 1200;
+$xxl: 1400;
+
+@mixin media($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
