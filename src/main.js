@@ -11,15 +11,12 @@ app.use(BootstrapVue);
 app.use(routers);
 app.mount('#app');
 
-const btnMenu = document.querySelector('.header__navbar-toggle'),
-  btnMenuList = document.querySelector('.header__navbar-categories');
+const nav = document.querySelector('.header__nav');
 
-btnMenu.addEventListener('click', function () {
-  this.classList.toggle('active');
+window.addEventListener('scroll', function() {
+  if(window.scrollY >= 500) nav.style.top = `-100%`
+  else nav.style.top = 0
 
-  if (this.classList.contains('active')) {
-    btnMenuList.classList.add('active');
-  } else {
-    btnMenuList.classList.remove('active');
-  }
-});
+  if(window.scrollY >= 100) nav.style.background = `#ffffffba`
+  else nav.style.background = `white`
+})

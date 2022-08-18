@@ -1,13 +1,19 @@
 .header {
   &__nav {
-    padding: 20px 0;
+    padding: 0;
+    box-shadow: 0 1px 5px $dark;
+    transition: 3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
   }
 
   &__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     &-logo img {
       width: 150px;
     }
@@ -29,10 +35,13 @@
         backdrop-filter: blur(3px);
         flex-direction: column;
         align-items: flex-start;
-        transition: .5s;
+        transition: 0.5s;
       }
       &.active {
         left: 0;
+      }
+      @include media(420px) {
+        width: 100%;
       }
     }
 
@@ -57,6 +66,7 @@
       font-weight: 600;
       color: $dark;
       transition: 0.5s;
+     
       &:hover {
         color: $blue;
       }
@@ -66,7 +76,7 @@
         padding: 15px 30px;
         margin: 0;
         color: black;
-
+        filter: invert(1);
         &:hover {
           background: black;
         }
@@ -106,6 +116,8 @@
 
       @include media($lg) {
         color: black;
+        font-weight: 600;
+        filter: invert(1);
       }
     }
 
@@ -117,10 +129,10 @@
       padding-top: 20px;
       opacity: 0;
       z-index: 5;
-
+      background: rgba(255, 255, 255, 0.706);
       &.active {
         opacity: 1;
-        top: 25px;
+        top: 30px;
       }
     }
 
@@ -150,7 +162,7 @@
 
     &-burger {
       width: 25px;
-      height: 20px;
+      height: 25px;
       position: relative;
       border: none;
       background: transparent;
@@ -159,9 +171,12 @@
       align-items: center;
       cursor: pointer;
       transition: 300ms linear;
-
+      overflow: hidden;
       @include media($lg) {
         display: flex;
+      }
+      @include media(420px) {
+        z-index: 99;
       }
 
       &::before {
@@ -170,8 +185,8 @@
         height: 2px;
         background: black;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 0px;
+        left: 0px;
         transition: 200ms linear;
       }
 
@@ -181,8 +196,8 @@
         height: 2px;
         background: black;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: 0px;
+        left: 0px;
         transition: 200ms linear;
       }
 
@@ -205,7 +220,7 @@
 
       &.active::after {
         transform: rotate(-45deg);
-        bottom: 7px;
+        bottom: 12px;
       }
     }
   }

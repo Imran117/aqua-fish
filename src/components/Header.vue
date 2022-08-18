@@ -5,7 +5,7 @@
         <router-link to="/" class="header__navbar-logo">
           <img src="@/assets/images/logo.png" alt=""/>
         </router-link>
-        <button class="header__navbar-burger" @click="burgerClass" :class="{active:openBurger}">
+        <button class="header__navbar-burger" @click="addClass('openBurger')" :class="{active:openBurger}">
           <span></span>
         </button>
         <div class="header__navbar-menu" :class="{active:openBurger}">
@@ -17,8 +17,8 @@
             </li>
           </ul>
           <div class="header__navbar-button">
-            <button class="header__navbar-toggle">RU</button>
-            <ul class="header__navbar-categories">
+            <button @click="addClass('openLang')" :class="[{active:openLang}, 'header__navbar-toggle' ]" >RU</button>
+            <ul class="header__navbar-categories" :class="{active:openLang}">
               <li class="header__navbar-lang">
                 <img src="@/assets/images/uz.png" alt="" />
                 UZ
@@ -43,6 +43,7 @@ export default {
   data() {
     return {
       openBurger: false,
+      openLang: false,
       links: links,
       activeClass: routerName,
     };
@@ -51,9 +52,9 @@ export default {
   watch: {},
   computed: {},
   methods: {
-    burgerClass() {
-      this.openBurger = this.openBurger == false ? true : false;
-    },
+    addClass(result) {
+      this[result] = this[result] == false ? true : false
+    }
   },
 };
 </script>

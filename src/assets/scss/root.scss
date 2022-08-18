@@ -27,7 +27,7 @@ h6 {
 
 $dark: #2e353e;
 $darkblue: #0c0f66;
-$blue: #6a80a9;
+$blue: #183153;
 
 // connected all fonts
 
@@ -54,11 +54,34 @@ button {
   cursor: pointer;
 }
 
+.large-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $blue;
+  text-align: center;
+}
+
+.title-line {
+  position: relative;
+}
+
+.title-line::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 2px;
+  background: $blue;
+}
+
 $sm: 576px;
 $md: 765px;
 $lg: 992px;
-$xl: 1200;
-$xxl: 1400;
+$xl: 1200px;
+$xxl: 1400px;
 
 @mixin media($size) {
     @media (max-width: $size) {
