@@ -19,13 +19,13 @@
         </div>
         <div class="home__block-item">
           <img class="home__block-icon" src="@/assets/images/maps.svg" alt="">
-          <h3 class="home__block-subName">Доступность</h3>
-          <p class="home__block-subText">Отвечаем на все ваши вопросы</p>
+          <h3 class="home__block-subName">Удобная локация</h3>
+          <p class="home__block-subText">Заботимся о наших клиентах</p>
         </div>
         <div class="home__block-item">
           <img class="home__block-icon" src="@/assets/images/like.svg" alt="">
-          <h3 class="home__block-subName">Доступность</h3>
-          <p class="home__block-subText">Отвечаем на все ваши вопросы</p>
+          <h3 class="home__block-subName">Гарантия качество</h3>
+          <p class="home__block-subText">Продукция проверенное годами</p>
         </div>
       </div>
     </div>
@@ -58,8 +58,25 @@
       </div>
     </div>
     <div class="home__info">
-      <div class="container">
+      <div class="container home__info-content">
+        <img class="home__info-image" src="@/assets/images/production.jpg" alt="">
 
+        <div class="home__info-item">
+          <h3 class="home__info-title">Temperature Adapted Feeds</h3>
+          <p>&nbsp;</p>
+          <p class="home__info-text">Температурно-адаптированный корм</p>
+          <p class="home__info-text">
+            Корма, адаптированные к разным сезонным температурам, открывают новые возможности для роста и жизнедеятельности рыб. Возможность извлечения пользы при смене температуры стало основой рецептуры кормов.
+          </p>
+          <p class="home__info-text">
+            Aller Aqua предлагает Корма Адаптированные к Температуре, концепцией которых является более высокое потребление корма и переваримость питательных веществ на протяжении всего года.
+            <br>
+            <br>
+            Корма Адаптированные к Температуре для разных видов и сезонов разрабатываются в сотрудничестве Aller Aqua Research и международными исследовательскими институтами рыбного хозяйства.
+          </p>
+          <p>&nbsp;</p>
+          <router-link class="link" to="/feed">Читать больше</router-link>
+        </div>
       </div>
     </div>
   </section>

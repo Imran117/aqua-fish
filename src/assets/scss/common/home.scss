@@ -9,7 +9,7 @@
     left: 0;
 
     &::before {
-      content: "";
+      content: '';
       background: rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(2px);
       position: absolute;
@@ -54,7 +54,7 @@
       padding-top: 32px;
 
       @include media($lg) {
-        justify-content: center;  
+        justify-content: center;
       }
     }
 
@@ -97,15 +97,15 @@
       flex-direction: column;
       justify-content: flex-start;
       padding: 10px;
-      box-shadow: 0 0 5px $blue;
       border-radius: 10px;
       transition: 0.5s;
       &:hover {
         transform: scale(1.02);
+        box-shadow: 0 0 5px $blue;
       }
 
-      @include media($xl) {    
-          margin:30px 0 ;     
+      @include media($xl) {
+        margin: 30px 0;
       }
     }
 
@@ -113,6 +113,53 @@
       font-size: 15px;
       color: $dark;
       font-weight: 500;
+    }
+  }
+
+  &__info {
+    background: $blue;
+    padding: 30px 0;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media($lg) {
+        flex-direction: column;
+      }
+    }
+    &-image {
+      max-width: 500px;
+      width: 100%;
+      @include media($lg) {
+        max-width: 700px;
+      }
+    }
+
+    &-item {
+      max-width: 600px;
+      margin-left: 30px;
+
+      @include media($lg) {
+        max-width: 100%;
+        margin-left: 0px;
+        margin-top: 30px;
+      }
+    }
+
+    &-title {
+      font-size: 22px;
+      line-height: 40px;
+      margin: 0 0 15px 0;
+      color: white;
+      font-weight: 600;
+    }
+
+    &-text {
+      color: white;
+      @include media($lg) {
+        font-size: 14px;
+      }
     }
   }
 }
