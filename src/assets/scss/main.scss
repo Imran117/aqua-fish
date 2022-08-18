@@ -5,3 +5,15 @@
 @import './common/info.scss';
 @import './common/product.scss';
 @import './common/quality.scss';
+
+.aller-logo {
+  transform: rotate(-90deg);
+  width: fit-content;
+  position: fixed;
+  bottom: 130px;
+  left: -90px;
+  text-transform: uppercase;
+  color: $blue;
+  font-weight: 700;
+  font-size: 14px;
+}

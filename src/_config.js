@@ -12,10 +12,6 @@ export const links = [
     url: '/info'
   },
   {
-    name: "ПРОДУКЦИЯ",
-    url: '/product'
-  },
-  {
     name: "Отзывы",
     url: '/comment'
   },

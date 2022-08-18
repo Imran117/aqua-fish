@@ -75,8 +75,12 @@
 
     &-subName {
       font-size: 26px;
+      font-weight: 500;
       color: $dark;
       margin: 6px 0 !important;
+      @include media($sm) {
+        font-size: 22px;
+      }
     }
 
     &-subText {
@@ -84,6 +88,9 @@
       color: $dark;
       font-weight: 500;
       text-align: center;
+      @include media($sm) {
+        font-size: 16px;
+      }
     }
     &-image {
       max-width: 400px;
