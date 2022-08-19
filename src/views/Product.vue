@@ -21,10 +21,8 @@
 </template>
 
 <script>
-import SortVue from '@/components/Sort.vue';
 export default {
   name: "Product-vue",
-  components: {SortVue}
 };
 </script>
 

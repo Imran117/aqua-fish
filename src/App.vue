@@ -1,6 +1,6 @@
 <template>
   <HeaderVue />
-  <router-view :asd="SortVue"/>
+  <router-view/>
   <FooterVue />
   <LogoVue />
 </template>

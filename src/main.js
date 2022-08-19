@@ -5,11 +5,12 @@ import routers from '@/router/index';
 document.title = 'allerFish';
 import '@/assets/scss/main.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+import SortPage from '@/components/Sort'
 const app = createApp(App);
+app.component('SortVue', SortPage)
 app.use(BootstrapVue);
 app.use(routers);
 app.mount('#app');
-
 
 const nav = document.querySelector('.header__nav');
 window.addEventListener('scroll', function() {
