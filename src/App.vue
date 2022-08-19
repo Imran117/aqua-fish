@@ -1,25 +1,23 @@
 <template>
-  <HeaderVue /> 
-  <router-view />
+  <HeaderVue />
+  <router-view :asd="SortVue"/>
   <FooterVue />
-  <LogoVue/>
+  <LogoVue />
 </template>
 
 <script>
 import HeaderVue from "@/components/Header.vue";
 import FooterVue from "@/components/Footer.vue";
 import LogoVue from "@/components/Logo.vue";
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderVue,
     FooterVue,
-    LogoVue
-}
-}
+    LogoVue,
+  },
+};
 </script>
 
 <style>
-
 </style>

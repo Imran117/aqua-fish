@@ -1,10 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import HomePage from '../views/Home.vue';
-import InfoPage from '../views/Info.vue';
-import ProductPage from '../views/Product.vue';
-import QualityPage from '../views/Quality.vue';
-import CommentPage from '../views/Comment.vue';
-import {DefaultPage, } from "../components/sections";
+
+function load(component) {
+  return () => import(`@/${component}.vue`);
+}
+
 const routerHistory = createWebHashHistory();
 const routes = createRouter({
   history: routerHistory,
@@ -12,49 +11,46 @@ const routes = createRouter({
   routes: [
     {
       path: '/',
-      component: HomePage,
+      component: load('views/Home'),
     },
     {
       path: '/product',
-      component: ProductPage,
+      component: load('views/Product'),
     },
     {
       path: '/info',
-      component: InfoPage,
+      component: load('views/Info'),
     },
     {
       path: '/quality',
-      component: QualityPage,
+      component: load('views/Quality'),
     },
     {
       path: '/comment',
-      component: CommentPage,
+      component: load('views/Comment'),
+    },
+    {
+      path: '/product/default-feed',
+      component: load('components/sections/Default-feed'),
+    },
+    {
+      path: '/product/grocery-feed',
+      component: load('components/sections/Grocery-feed'),
+    },
+    {
+      path: '/product/producers-feed',
+      component: load('components/sections/Producers-feed'),
+    },
+    {
+      path: '/product/functional-feed',
+      component: load('components/sections/Functional-feed'),
+    },
+    {
+      path: '/product/organic-feed',
+      component: load('components/sections/Organic-feed'),
     },
   ],
 });
-
-const sortRoutes = createRouter({
-  history: routerHistory,
-  linkActiveClass: 'active', 
-  routes: [
-    {
-      path: '/product/start-feed',
-      component: 
-    },
-    {
-      path: '/product/start-feed',
-      component: 
-    },
-    {
-      path: '/product/start-feed',
-      component: 
-    },
-    {
-      path: '/product/start-feed',
-      component: 
-    },
-  ]
-})
 
 export default routes;
 export const routerName = routerHistory.location;

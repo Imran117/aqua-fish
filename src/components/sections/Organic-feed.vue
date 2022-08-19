@@ -1,11 +1,10 @@
 <template>
-  <SortVue/>
+  asdsdgfdgfdgh
 </template>
 
 <script>
-
 export default {
-  name: 'Default-feed.vue'
+  name: 'Organic-feed.vue'
 }
 </script>
 
