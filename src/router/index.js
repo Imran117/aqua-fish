@@ -4,6 +4,7 @@ import InfoPage from '../views/Info.vue';
 import ProductPage from '../views/Product.vue';
 import QualityPage from '../views/Quality.vue';
 import CommentPage from '../views/Comment.vue';
+import {DefaultPage, } from "../components/sections";
 const routerHistory = createWebHashHistory();
 const routes = createRouter({
   history: routerHistory,
@@ -34,12 +35,24 @@ const routes = createRouter({
 
 const sortRoutes = createRouter({
   history: routerHistory,
-  linkActiveClass: 'active',
+  linkActiveClass: 'active', 
   routes: [
     {
       path: '/product/start-feed',
       component: 
-    }
+    },
+    {
+      path: '/product/start-feed',
+      component: 
+    },
+    {
+      path: '/product/start-feed',
+      component: 
+    },
+    {
+      path: '/product/start-feed',
+      component: 
+    },
   ]
 })
 
