@@ -75,7 +75,7 @@
             Корма Адаптированные к Температуре для разных видов и сезонов разрабатываются в сотрудничестве Aller Aqua Research и международными исследовательскими институтами рыбного хозяйства.
           </p>
           <p>&nbsp;</p>
-          <router-link class="link" to="/feed">Читать больше</router-link>
+          <router-link class="link" to="/product">Читать больше</router-link>
         </div>
       </div>
     </div>

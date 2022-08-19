@@ -32,5 +32,16 @@ const routes = createRouter({
   ],
 });
 
+const sortRoutes = createRouter({
+  history: routerHistory,
+  linkActiveClass: 'active',
+  routes: [
+    {
+      path: '/product/start-feed',
+      component: 
+    }
+  ]
+})
+
 export default routes;
 export const routerName = routerHistory.location;

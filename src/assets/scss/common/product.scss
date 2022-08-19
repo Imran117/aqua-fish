@@ -1,0 +1,26 @@
+.product {
+  &__content {
+    padding-top: 68px;
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__preview {
+    padding: 10px 0 70px;
+
+    &-title {
+      color: $blue;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 4vw;
+    }
+
+    &-text {
+      line-height: 26px;
+      color: $dark;
+      font-weight: 500;
+    }
+  }
+}
