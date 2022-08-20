@@ -30,7 +30,7 @@ const routes = createRouter({
       component: load('views/Comment'),
     },
     {
-      path: '/product/start-feed',
+      path: '/product/default-feed',
       component: load('components/sections/Default-feed'),
     },
     {

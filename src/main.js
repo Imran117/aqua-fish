@@ -20,3 +20,13 @@ window.addEventListener('scroll', function() {
   if(window.scrollY >= 100) nav.style.background = `#ffffffba`
   else nav.style.background = `white`
 })
+
+class asd  {
+  constructor() {
+    this.switch = !this.switch
+
+    console.log(this.switch);
+  }
+}
+
+new asd()

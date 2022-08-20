@@ -10,8 +10,8 @@
         </button>
         <div class="header__navbar-menu" :class="{active:openBurger}">
           <ul class="header__navbar-list" >
-            <li v-for="(link, index) in links" :key="index">
-              <router-link class="header__navbar-link" :to="link.url">
+            <li v-for="(link, index) in links" :key="index" >
+              <router-link class="header__navbar-link" @click="addClass('openBurger')"  :to="link.url" >
               {{link.name}}
               </router-link>
             </li>
