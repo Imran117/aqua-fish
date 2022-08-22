@@ -1,8 +1,8 @@
 <template>
-  <HeaderVue />
-  <router-view/>
-  <FooterVue />
-  <LogoVue />
+    <HeaderVue />
+    <router-view />
+    <FooterVue />
+    <LogoVue />
 </template>
 
 <script>

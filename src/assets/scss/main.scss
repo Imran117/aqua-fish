@@ -20,3 +20,82 @@
     display: none;
   }
 }
+
+.sort {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 0;
+  &__link {
+    color: $blue !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    &::after {
+      content: '';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 2px;
+      margin: 0 15px;
+      background: $blue;
+
+      @include media($sm) {
+        background: transparent;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  @include media($sm) {
+    &__arrow {
+      &::before {
+        content: url(@/assets/images/arrow-lang.svg);
+        margin: 0 15px;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &__list {
+    display: block;
+    height: 30px;
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 5px;
+    @include media($sm) {
+      height: 0;
+    }
+    &-link,
+    &-default {
+      padding: 5px;
+      display: block;
+      color: $dark;
+      font-weight: 500;
+    }
+
+    &-link:hover {
+      color: white;
+    }
+
+    &-link.active {
+      background: white;
+      color: $blue;
+    }
+
+    &-default {
+      cursor: pointer;
+    }
+
+    &.active {
+      height: 185px;
+      background: #7c7c7cb0;
+    }
+  }
+
+  @include media($sm) {
+    flex-direction: column;
+  }
+}
