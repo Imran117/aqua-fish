@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkaler_aqua"]=self["webpackChunkaler_aqua"]||[]).push([[881],{881:function(n,e,a){a.r(e),a.d(e,{default:function(){return l}});var u=a(3396);function r(n,e,a,r,t,f){return(0,u.wg)(),(0,u.iD)("div",null,"Info page")}var t={name:"Info-vue"},f=a(89);const c=(0,f.Z)(t,[["render",r]]);var l=c}}]);
-//# sourceMappingURL=881.2a3b63d0.js.map

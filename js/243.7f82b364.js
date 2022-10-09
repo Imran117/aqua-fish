@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkaler_aqua"]=self["webpackChunkaler_aqua"]||[]).push([[243],{3243:function(e,n,a){a.r(n),a.d(n,{default:function(){return f}});var u=a(3396);function r(e,n,a,r,t,c){return(0,u.wg)(),(0,u.iD)("div",null,"Comment page")}var t={name:"Comment-vue"},c=a(89);const l=(0,c.Z)(t,[["render",r]]);var f=l}}]);
-//# sourceMappingURL=243.7f82b364.js.map
